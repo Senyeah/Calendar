@@ -1,0 +1,186 @@
+#calendar {
+	width: 100%;
+	height: 600px;
+	
+	border: 1px solid #c8c8c8;
+	box-sizing: border-box;
+}
+
+#calendar-header {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+#calendar-timeframe {
+	margin-left: 20px;
+	font-size: 17pt;
+}
+
+
+/* Calendar Controls */
+
+#calendar-controls {
+	float: right;
+	font-size: 0;
+	height: 100%;
+}
+
+#calendar-controls button {
+	display: inline-block;	
+	vertical-align: top;
+	
+	height: 100%;
+	width: 60px;
+	
+	border: none;
+	
+	font-family: inherit;
+	font-size: 17pt;
+	text-align: center;
+	
+	background-color: transparent;
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	
+	cursor: default;
+}
+
+#calendar-controls > button:active {
+	background-color: #dedede;
+	color: inherit;
+}
+
+#calendar-previous-month, #calendar-next-month {
+	background-size: 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#calendar-previous-month {
+	background-image: url("resources/left-arrow.svg");
+}
+
+#calendar-next-month {
+	background-image: url("resources/right-arrow.svg");
+}
+
+#calendar-controls #calendar-add-action {
+	font-size: 25pt;
+}
+
+/* Days of week hint */
+
+#calendar-days-of-week {
+	width: 100%;
+}
+
+#calendar-days-of-week table {
+	width: 100%;
+	height: 100%;
+	
+	table-layout: fixed;
+	
+	border-collapse: collapse;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+#calendar-days-of-week tr {
+	height: 20px;
+	background-color: #f7f7f7;
+}
+
+#calendar-days-of-week td {
+	padding: 5px 10px;
+	
+	color: #909090;
+	font-weight: bold;
+	font-size: 10pt;
+	
+	text-transform: uppercase;
+	text-align: right;
+	
+	border: none;
+}
+
+/* Calendar Table */
+
+#calendar-container {
+	overflow: hidden;
+}
+
+#calendar-container table {
+	width: 100%;
+	height: 100%;
+
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+#calendar-container table td {
+	position: relative;
+	
+	background-color: white;
+	border: 1px solid #c8c8c8;
+	
+	padding: 10px;
+	background-clip: padding-box;
+	
+	vertical-align: top;
+	text-align: right;
+}
+
+/* Remove the side borders since we already have one drawn */
+
+#calendar-container table tr:first-child td {
+	border-top: none;
+}
+
+#calendar-container table tr td:last-child {
+	border-right: none;
+}
+
+#calendar-container table tr:last-child td {
+	border-bottom: none;
+}
+
+#calendar-container table tr td:first-child {
+	border-left: none;
+}
+
+#calendar-container table .not-current-month {
+	background-color: #f7f7f7;
+	color: #909090;
+}
+
+#calendar-container table .today {
+	color: #1d9eff;
+	font-weight: bolder;
+}
+
+#calendar-container table .selected {
+	background-color: #eaf9ff;
+}
+
+.event-indicator {
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+	
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	
+	text-align: center;
+	font-size: 10pt;
+	font-weight: normal;
+	
+	background-color: #f7f7f7;
+	color: #909090;
+	
+	border: inherit;
+	border-style: none solid solid none;
+}
