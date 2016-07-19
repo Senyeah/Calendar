@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calendar</title>		
+		<meta charset="UTF-8">
+		
+		<link rel="stylesheet" href="format.css">
+		<link rel="stylesheet" href="calendar.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="calendar.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<h1>Derek’s Calendar 2.0</h1>
+				<h2>Because fucking hell the old one was bad…</h2>
+			</header>
+			<div id="calendar">
+				<div id="calendar-header">
+					<span id="calendar-timeframe"></span>
+					
+					<div id="calendar-controls">
+						<button id="calendar-add-action" data-onclick-url="add_event.php">+</button>
+						<button id="calendar-previous-month"></button>
+						<button id="calendar-next-month"></button>
+					</div>
+				</div>
+				<div id="calendar-days-of-week">
+					<table>
+						<tr>
+							<td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td>
+						</tr>
+					</table>
+				</div>
+				<div id="calendar-container"></div>
+			</div>
+		</div>
+	</body>
+</html>
